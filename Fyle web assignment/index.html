@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">  <form id="income-tax-form">
+        <h2>Income Tax Calculator</h2>
+        <div class="form-group">
+            <label for="gross-annual-income">Gross annual income: <i class="bi bi-question-circle" data-target="popover1"></i></label>
+            <p class="tooltip-text">Gross annual income is your total salary in a year before any deductions.</p>
+            <div class="popover" id="popover1"> <div class="arrow left" data-target="popover1"></div>  <div class="txt">   Gross annual income is your total salary in a year before any deductions  </div> </div>
+            <i class="bi bi-exclamation-circle tooltip error-icon" data-target="first-button"></i>
+            <div class="tool-tip" id="tool-tip1"> <div class="arrow2" data-target="tool-tip1"></div>  <div class="txt2">   Please enter a valid number </div> </div>
+            <input type="text" id="gross-annual-income" name="gross-annual-income" placeholder="Enter gross annual income"  required>
+        </div>
+        <div class="form-group">
+            <label for="extra-income">Extra income: <i class="bi bi-question-circle" data-target="popover2"></i> </label>
+            <p class="tooltip-text">Enter extra income from other sources (optional).</p>
+            <div class="popover" style="margin-left: 95px; margin-top: -150px" id="popover2"> <div class="arrow left" style="margin-top: 77px" ></div>  <div class="txt">Extra income refers to any additional earnings you receive from sources other than your primary salary.</div> </div>
+            <i class="bi bi-exclamation-circle tooltip error-icon" data-target="second-button" ></i>
+            <input type="text" id="extra-income" name="extra-income" placeholder="Enter extra income">
+            <div class="tool-tip"  style="margin-top: -5rem;" id="tool-tip1"> <div class="arrow2" data-target="tool-tip1"></div>  <div class="txt2">   Please enter a valid number </div> </div>
+        </div>
+        <div class="form-group">
+            <label for="age-group">Age group: <i class="bi bi-question-circle" data-target="popover3"></i></label>
+            <div class="popover" id="popover3" style="margin-left: 80px; margin-top:-120px" > <div class="arrow left"  style="margin-top: 60px"></div>  <div class="txt"> Age group categorizes individuals based on their age range.</div> </div>
+            <select id="age-group" name="age-group">
+                <option value="">Select age group</option>
+                <option value="0-40">&lt; 40</option>
+                <option value="40-60">&ge; 40 &amp; &lt; 60</option>
+                <option value="60-100">&ge; 60</option>
+            </select>
+            
+        </div>
+        <div class="form-group">
+            <label for="total-deductions">Total applicable deductions: <i class="bi bi-question-circle" data-target="popover4"></i></label>
+            <p class="tooltip-text">Enter total applicable deductions.</p>
+            <div class="popover" id="popover4" style="margin-left: 193px; margin-top: -150px">
+                <div class="arrow left" style="margin-top: 77px;"></div> 
+           
+             
+                <div class="txt">Total applicable deduction include various expenses that can be deducted from your gross income.</div> </div>
+                <i class="bi bi-exclamation-circle tooltip error-icon" data-target="third-button" ></i>
+            <input type="text" id="total-deductions" name="total-deductions" placeholder="Enter total applicable deductions">
+            <div class="tool-tip"  style="margin-top: -5rem;" id="tool-tip1"> <div class="arrow2" data-target="tool-tip1"></div>  <div class="txt2">   Please enter a valid number </div> </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+    <div class="container">   
+        <p>Your overall income will be</p>
+        <p class="amount">00</p>
+        <p style="font-size: 1rem;">after tax deductions</p>
+        <button class="button2">Close</button>
+    </div>
+  
+    <script src="index.js"></script>
+</body>
+</html>
