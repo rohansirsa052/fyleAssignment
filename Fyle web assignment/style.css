@@ -141,7 +141,7 @@ button:hover {
     text-align: center;
     font-size: 2rem;
    
-    /* visibility: hidden; */
+    visibility: hidden; 
     height: 60vh;
     width: 40%;
     display: flex;
